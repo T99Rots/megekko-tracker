@@ -99,4 +99,4 @@ setInterval(getPosition, 1000 * 60 * 10)
 
 getPosition();
 
-server.listen(3000);
+server.listen(config.port || 3000);
