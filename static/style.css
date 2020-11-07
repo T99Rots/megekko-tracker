@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+body {
+  background: linear-gradient(130deg, #4b4a9a, #05040c 90%);;
+  margin: 0;
+  font-family: 'Goldman';
+}
+
+#container {
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  height: 100vh;
+  text-align: center;
+}
+
+#top {
+  color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#main-status {
+  font-size: 80px;
+}
+
+#position {
+  color: #428bad;
+}
+
+#queue {
+  color: #ec2c9d;
+}
+
+#product-name {
+  color: #f4c762;  
+  font-weight: 700;
+}
+
+#time {
+  color: #58c8b1;
+  font-weight: 700;
+}
+
+#chart-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chartContainer {
+  height: calc(100% - 120px);
+  width: calc(100% - 80px);
+  max-width: 1200px;
+  padding: 20px;
+}

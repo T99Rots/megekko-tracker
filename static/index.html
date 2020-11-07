@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue countdown</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="canvasjs.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="top">
+        <div id="main-status">
+          <span id="position">...</span>
+          <span>out of</span>
+          <span id="queue">...</span>
+        </div>
+        <div id="details">
+          Waiting for a <span id="product-name">...</span>, last updated <span id="time">...</span>
+        </div>
+      </div>
+      <div id="chart-area">
+        <div id="chartContainer"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
