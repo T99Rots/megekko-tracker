@@ -95,8 +95,9 @@ const getPosition = async () => {
   }
 }
 
-setInterval(getPosition, 1000 * 60 * 10)
+setInterval(getPosition, 1000 * 60 * 61)
 
 getPosition();
 
 server.listen(config.port || 3000);
+console.log(`${getDate()} Listening on port ${config.port || 3000}`)
