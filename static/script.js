@@ -29,7 +29,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
     labelFontFamily: 'Goldman',
 	},
 	toolTip:{
-		shared: true
+    shared: true,
+    fontFamily: 'Goldman'
 	},
 	data: [{
 		name: "Position in queue",
