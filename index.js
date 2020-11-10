@@ -10,10 +10,24 @@ const datastore = Datastore.create(path.join(__dirname, 'data.db'));
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
-const config = require(path.join(__dirname, 'config.json'));
+
+let config = {
+  port: process.env.PORT || 3000,
+  orderId: process.env.ORDER_ID,
+  postcode: process.env.POSTCODE
+}
 
 if(!config.orderId || !config.postcode) {
-  console.error('Incorrect config, missing either orderId or postcode, pleas check config.json')
+  try {
+    config = require(path.join(__dirname, 'config.json'));
+  } catch (e) {
+    console.warn('missing config.json or environment variables')
+  }
+}
+
+if(!config.orderId || !config.postcode) {
+  console.error('Incorrect config, missing either orderId or postcode, pleas check config.json');
+  process.exit(1);
 }
 
 app.use(express.static(path.join(__dirname, 'static')))
