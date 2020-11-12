@@ -27,6 +27,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		fontSize: 16,
     itemclick: toggleDataSeries,
     labelFontFamily: 'Goldman',
+    fontFamily: 'Goldman',
+    fontWeight: 'normal'
 	},
 	toolTip:{
     shared: true,
